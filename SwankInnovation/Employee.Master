@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Employee.master.cs" Inherits="SwankInnovation.Employee" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Fully Responsive Bootstrap 4 Admin Dashboard Template" name="description">
+    <meta content="Spruko" name="author">
+
+    <!-- Title -->
+    <title>SIPL RMS</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+    <!--Bootstrap.min css-->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Adon CSS -->
+    <link href="../assets/css/left-menu-boxed.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom scroll bar css-->
+    <link href="../assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- Sidemenu Css -->
+    <link href="../assets/plugins/toggle-sidebar/css/darkfull-sidemenu-boxed.css" rel="stylesheet">
+    <!-- Data table css -->
+    <link href="assets/plugins/datatable/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="assets/plugins/datatable/responsivebootstrap4.min.css" rel="stylesheet" />
+
+    <link href="assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="app sidebar-mini rtl">
+    <form id="form1" runat="server">
+        <div>
+            <div class="page">
+                <div class="page-main">
+                    <!-- Sidebar menu-->
+                    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+                    <aside class="app-sidebar" style="background: linear-gradient(#68c3d8,#54da54)";>
+                        <div class="sidebar-img">
+                            <a class="navbar-brand" href="EmployeeHome.aspx">
+                                <img alt="..." class="navbar-brand-img main-logo" src="assets/img/logo-black.png"></a>
+                            <ul class="side-menu">
+                                 <li class="slide">
+                                    <a class="side-menu__item" href="EmployeeHome.aspx"><span class="side-menu__label">Home</span></a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="Profile.aspx"><span class="side-menu__label">My Profile</span></a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="EmpDailyReport.aspx"><span class="side-menu__label">Daily Report</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="LeaveRequest.aspx"><span class="side-menu__label">Leave Request</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="EmpViewLeaveStatus.aspx"><span class="side-menu__label">View Leave Request</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="ViewComplaint.aspx"><span class="side-menu__label">View Complaint</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="HolidayDisplay.aspx"><span class="side-menu__label">Holiday Display</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="TrainingDisplay.aspx"><span class="side-menu__label">Training Display</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="WorkAssignDisplay.aspx"><span class="side-menu__label">WorkAssign Display</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="MeetingDisplay.aspx"><span class="side-menu__label">Meeting Display</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="MonthlyDisplay.aspx"><span class="side-menu__label">Monthly Display</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="ChangePassword.aspx"><span class="side-menu__label">Change Password</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- Sidebar menu-->
+
+                    <!-- app-content-->
+                    <div class="app-content ">
+                        <div class="side-app">
+                            <div class="main-content">
+                                <div class="p-2 d-block d-sm-none navbar-sm-search">
+                                </div>
+                                <!-- Top navbar -->
+                                <nav class="navbar navbar-top  navbar-expand-md navbar-dark" id="navbar-main">
+                                    <div class="container-fluid">
+                                        <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
+                                        <div class="navbar-container">
+                                            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                                                <ul class="navbar-nav">
+                                                    <li>
+                                                        <asp:Button ID="button1" CssClass="btn btn-primary mt-1 mb-1" CausesValidation="false" OnClick="button1_Click" Text="LOGOUT" runat="server" />
+                                                    </li>
+                                                    <li class="nav-item mr-2" style="margin-top: 14px;"><a id="navbar-fullscreen" href="javascript:;" class="nav-link apptogglefullscreen"><i class="ft-maximize font-medium-3 blue-grey darken-4"></i>
+                                                        <p class="d-none">fullscreen</p>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <!-- Top navbar-->
+                                <div class="container-fluid pt-8">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                        </div>
+                    </d>
+                    <!-- app-content-->
+                </div>
+            </div>
+            <footer align="center">
+                <p style="color: red"><b>© 2019 SIPL RMS Daily Report</b></p>
+            </footer>
+            <!-- Adon Scripts -->
+
+            <!-- Core -->
+            <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+            <script src="../assets/js/popper.js"></script>
+            <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script src="../assets/plugins/chart-circle/circle-progress.min.js"></script>
+
+            <!-- Optional JS -->
+            <script src="../assets/plugins/chart.js/dist/Chart.min.js"></script>
+            <script src="../assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+            <!-- Echarts JS -->
+            <script src="../assets/plugins/chart-echarts/echarts.js"></script>
+
+            <!-- Fullside-menu Js-->
+            <script src="../assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+            <!-- Custom scroll bar Js-->
+            <script src="../assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+            <!-- Adon JS -->
+            <script src="../assets/js/custom.js"></script>
+            <script src="../assets/js/dashboard-hr.js"></script>
+            <!-- Data tables -->
+            <script src="assets/plugins/datatable/jquery.dataTables.min.js"></script>
+            <script src="assets/plugins/datatable/dataTables.bootstrap4.min.js"></script>
+            <script src="assets/plugins/datatable/dataTables.responsive.min.js"></script>
+            <script src="assets/plugins/datatable/responsive.bootstrap4.min.js"></script>
+        </div>
+    </form>
+</body>
+</html>
